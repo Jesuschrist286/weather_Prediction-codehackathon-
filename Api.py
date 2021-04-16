@@ -20,8 +20,8 @@ def getWeather(canvas):
 
     final_info = condition + "\n" + str(temp) + "°C" 
     final_data = "\n"+ "Min Temp: " + str(min_temp) + "°C" + "\n" + "Max Temp: " + str(max_temp) + "°C" +"\n" + "Pressure: " + str(pressure) + "\n" +"Humidity: " + str(humidity) + "\n" +"Wind Speed: " + str(wind) + "\n" + "Sunrise: " + sunrise + "\n" + "Sunset: " + sunset
-    label1.config(text = final_info,foreground = "#F62817",bg="#8C001A")
-    label2.config(text = final_data,foreground = "#F62817",bg="#8C001A")
+    label1.config(text = final_info,foreground = "white",bg="#8C001A")
+    label2.config(text = final_data,foreground = "white",bg="#8C001A")
 
 
 canvas = tk.Tk()
@@ -30,8 +30,11 @@ canvas.configure(bg='#8C001A')
 canvas.title("Weather App")
 f = ("poppins", 15, "bold")
 t = ("poppins", 35, "bold")
-
-textField = tk.Entry(canvas, justify='center', width = 20, font = t,foreground="red")
+label3 = tk.Label(canvas,borderwidth = 4,font=f)
+label3.pack()
+switch = "\n" + "Enter your city:" + "\n"
+label3.config(text = switch,foreground = "white",bg="#8C001A") 
+textField = tk.Entry(canvas,justify='center', width = 20, font = t,foreground="white")
 textField.configure(bg="#C04000", insertbackground='black')
 textField.pack(pady = 20)
 textField.focus()
